@@ -21,7 +21,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "project")
+@Table(name = "task")
 public class TaskEntity {
 
     @Id

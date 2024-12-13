@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -23,7 +24,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "task")
+@Table(name = "task_state")
 public class TaskStateEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -39,5 +40,6 @@ public class TaskStateEntity {
 
     @Builder.Default
     @OneToMany
+    @JoinColumn(name = "task_state_id", referencedColumnName = "id")
     private List<TaskEntity> tasks = new ArrayList<>();
 }

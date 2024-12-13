@@ -24,6 +24,7 @@ dependencies {
 
     // PostgreSQL Driver
     implementation 'org.postgresql:postgresql'
+    implementation 'org.postgresql:postgresql:42.7.2'
 
     // Lombok
     compileOnly 'org.projectlombok:lombok'
