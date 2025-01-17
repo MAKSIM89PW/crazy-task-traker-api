@@ -4,7 +4,7 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import my.code.crazy.task.tracker.api.dto.ProjectDto;
-import my.code.crazy.task.tracker.api.exceptions.BadRequestExeption;
+import my.code.crazy.task.tracker.api.exception.BadRequestExeption;
 import my.code.crazy.task.tracker.api.factories.ProjectDtoFactory;
 import my.code.crazy.task.tracker.store.repositories.ProjectRepository;
 import org.springframework.web.bind.annotation.PostMapping;
