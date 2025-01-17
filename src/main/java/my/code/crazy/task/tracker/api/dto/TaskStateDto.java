@@ -29,5 +29,5 @@ public class TaskStateDto {
 
     @NonNull
     @JsonProperty("created_at")
-    private Instant createdAt = Instant.now();
+    private Instant createdAt;
 }

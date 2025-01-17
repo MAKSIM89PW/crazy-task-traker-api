@@ -21,4 +21,7 @@ public class ProjectDto {
 
     @JsonProperty("created_at")
     Instant createdAt;
+
+    @JsonProperty("update_at")
+    Instant updateAt;
 }

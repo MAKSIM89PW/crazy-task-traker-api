@@ -1,13 +1,6 @@
 package my.code.crazy.task.tracker.store.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -38,8 +31,11 @@ public class TaskStateEntity {
     @Builder.Default
     private Instant createAt = Instant.now();
 
+    @ManyToOne
+    ProjectEntity project;
+
     @Builder.Default
     @OneToMany
-    @JoinColumn(name = "task_state_id")
+    @JoinColumn(name = "task_state_id", referencedColumnName = "id")
     private List<TaskEntity> tasks = new ArrayList<>();
 }

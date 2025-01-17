@@ -25,7 +25,7 @@ public class TaskDto {
 
     @NonNull
     @JsonProperty("created_at")
-    private Instant createdAt = Instant.now();
+    private Instant createdAt;
 
     String description;
 }
